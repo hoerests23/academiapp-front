@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-4">
+      <h1>AcademiApp</h1>
+      <p>Sistema de Gestión Escolar para el Colegio Bernardo O'Higgins :3</p>
+      <p>Bienvenido a la aplicación de gestión escolar. Aquí puedes administrar estudiantes, profesores, cursos y más.</p>
+      <p>Saludos.</p>
     </div>
   );
 }
