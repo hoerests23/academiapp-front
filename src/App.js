@@ -1,13 +1,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HojasVidaPage from './pages/VidaEstudiantil/HojasVidaPage';
+import HojaVidaDetallePage from './pages/VidaEstudiantil/HojaVidaDetallePage';
+import MensajeriaPage from './pages/Mensajeria/MensajeriaPage';
 
 function App() {
   return (
-    <div className="container mt-4">
-      <h1>AcademiApp</h1>
-      <p>Sistema de Gestión Escolar para el Colegio Bernardo O'Higgins :3</p>
-      <p>Bienvenido a la aplicación de gestión escolar. Aquí puedes administrar estudiantes, profesores, cursos y más.</p>
-      <p>Saludos.</p>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/hojas-vida" element={<HojasVidaPage />} />
+        <Route path="/hojas-vida/:hojaId" element={<HojaVidaDetallePage />} />
+        <Route path="/mensajeria" element={<MensajeriaPage />} />
+        <Route path="/" element={<HojasVidaPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
